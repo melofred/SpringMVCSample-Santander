@@ -1,9 +1,8 @@
 ---
 applications:
-- name: heatmap
-  memory: 1G 
-  instances: 1
-  host: euro-retailer
-  path: ./target/pcfdemo.war
+- name: springmvc-sample
+  memory: 512M 
+  instances: 2
+  path: ./target/springmvc-demo.war
   services:
-    - rabbit
+    - santanderDB 
