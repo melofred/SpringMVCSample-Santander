@@ -31,7 +31,7 @@
             type="text" path="lastName"
             value="${user.lastName}" /> <br /> 
         DOB : <form:input
-            type="text" path="dob"
+            type="date" path="dob"
             value="${user.dob}" /> <br /> 
         Email : <form:input type="text" path="email"
             value="${user.email}" /> <br /> <input
