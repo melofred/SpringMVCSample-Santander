@@ -103,5 +103,5 @@ public class UserController {
 	    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 	    CustomDateEditor editor = new CustomDateEditor(dateFormat, true);
 	    binder.registerCustomEditor(Date.class, editor);
-	}	
+	}
 }
