@@ -2,6 +2,7 @@ package com.pivotal.controller;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 
@@ -57,7 +58,9 @@ public class UserController {
     
 	@RequestMapping(value = "/listUser")
 	public String listUser(Model model) {
-		model.addAttribute("users", dao.getAllUsers());
+		List<User> users = dao.getAllUsers();		  
+		model.addAttribute("users", users);
+		System.out.println("RETURNING "+users.size()+ " USERS");
         return LIST_USER;
     }
         
@@ -94,7 +97,7 @@ public class UserController {
 	  }
 	  else dao.updateUser(user);
 	  
-	  model.addAttribute("users", dao.getAllUsers());	
+	  model.addAttribute("users", dao.getAllUsers());
 	  return LIST_USER;
 	 }
 	
